@@ -2,6 +2,8 @@ Django>=4.2
 gunicorn>=20.1.0
 django-phonenumber-field
 phonenumbers>=8.12.0
+autoslug==1.0.5
+django-autoslug
 django-crispy-forms
 crispy-bootstrap5
 django-imagekit
