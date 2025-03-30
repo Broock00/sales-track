@@ -2,7 +2,6 @@ from django.db import models
 from store.models import Item
 from accounts.models import Profile, Vendor
 from django_extensions.db.fields import AutoSlugField
-
 # Create your models here.
 
 PAYMENT_CHOICES = [

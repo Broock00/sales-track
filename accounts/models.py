@@ -7,7 +7,6 @@ from phonenumber_field.modelfields import PhoneNumberField
 from django.utils.text import slugify
 from django_extensions.db.fields import AutoSlugField
 
-
 STATUS_CHOICES = [
     ('INA', 'Inactive'),
     ('A', 'Active'),

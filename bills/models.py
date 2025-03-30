@@ -1,6 +1,5 @@
 from django.db import models
-from autoslug import AutoSlugField
-
+from django_extensions.db.fields import AutoSlugField
 class Bill(models.Model):
     slug = AutoSlugField(unique=True, populate_from='date')
     date = models.DateTimeField(auto_now_add=True, verbose_name=('Date (eg: 2022/11/22)'))

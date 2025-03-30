@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-8*0mmp%b@+9lq&qc)p5**l0(x(aksa@0xdx$y5#vxl-lu#=j^+'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ["sales-track.onrender.com", "localhost"]
 
@@ -61,9 +61,6 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
-
-MIDDLEWARE.insert(1, "whitenoise.middleware.WhiteNoiseMiddleware")
-
 
 ROOT_URLCONF = 'InventoryMS.urls'
 
@@ -127,6 +124,7 @@ USE_I18N = True
 
 USE_TZ = True
 
+AUTOSLUG_SLUGIFY_FUNCTION = 'django.utils.text.slugify'
 
 
 LOGIN_URL = 'user-login'
@@ -135,9 +133,10 @@ LOGOUT_URL = 'logout'
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
-STATIC_URL = 'static/'
-STATICFILES_DIRS = [os.path.join(BASE_DIR,'static')
-]
+STATIC_URL = "/static/"
+STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")  # Ensure STATIC_ROOT is set
+
+STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]  # Ensure this is a list
 MEDIA_ROOT = os.path.join(BASE_DIR, 'static/images')
 MEDIA_URL = '/images/'
 
