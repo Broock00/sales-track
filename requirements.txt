@@ -11,3 +11,4 @@ django-extensions
 django-filter
 django-tables2
 tablib
+whitenoise
